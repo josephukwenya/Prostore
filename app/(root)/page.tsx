@@ -1,7 +1,16 @@
-import { Button } from '@/components/ui/button';
+import sampleData from '@/db/sample-data';
+import ProductList from '@/components/shared/products/product-list';
 
 const Homepage = () => {
-  return <>Prostore</>;
+  return (
+    <>
+      <ProductList
+        data={sampleData.products}
+        title='Newest Arrivals'
+        limit={4}
+      />
+    </>
+  );
 };
 
 export default Homepage;
